@@ -1,0 +1,299 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: hsl(0, 4%, 16%);
+    font-family: Arial, Helvetica, sans-serif;
+    overflow: hidden;
+}
+
+.Points {
+    width: 300px;
+    height: 65px;
+    background-color: rgb(26, 25, 25);
+    margin-inline: auto;
+    margin-top: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    color: white;
+    border: 5px solid rgb(20, 20, 20);
+}
+
+#Points {
+    font-size: 25px;
+    border-right: 1px solid gray;
+    padding-right: 3px;
+}
+
+.Corruption-reset {
+    position: absolute;
+    top: 0;
+    right: 0;
+    text-align: center;
+    margin-top: 15px;
+    margin-right: 50px;
+    width: 20%;
+    height: auto;
+    padding: 5px;
+    background-color: blueviolet;
+    border: 3px solid purple;
+    visibility: collapse;
+}
+
+.Corruption-reset:hover {
+    background-color: rgb(181, 8, 181);
+    cursor: pointer;
+}
+
+#Universe-limit {
+    font-size: 22px;
+    padding-left: 3px;
+}
+
+#Points-persec {
+    font-size: 20px;
+}
+
+.Universe {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(84, 14, 212);
+    margin-top: 15px;
+}
+
+.Planets {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#Planet1 {
+    background-color: aquamarine;
+    padding: 5px;
+    margin: 10px;
+    text-align: center;
+    border: 2px solid lime;
+}
+
+#Planet1:hover {
+    cursor: default;
+}
+
+#Planet2 {
+    background-color: cadetblue;
+    padding: 5px;
+    margin: 10px;
+    text-align: center;
+    border: 2px solid navy;
+}
+
+#Planet2:hover {
+    cursor: default;
+}
+
+#Planet3 {
+    background-color: rgb(0, 255, 68);
+    padding: 5px;
+    margin: 10px;
+    text-align: center;
+    border: 2px solid darkgreen;
+    visibility: collapse;
+}
+
+#Planet3:hover {
+    cursor: default;
+}
+
+#Planet4 {
+    background-color: rgb(131, 8, 180);
+    padding: 5px;
+    margin: 10px;
+    text-align: center;
+    border: 2px solid rgb(99, 0, 124);
+    visibility: collapse;
+}
+
+#Planet4:hover {
+    cursor: default;
+}
+
+.Upgrades {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: rgb(14, 14, 121);
+    margin-top: 15px;
+}
+
+#Upgrade1 {
+    width: auto;
+    padding: 5px;
+    margin: 5px;
+    background-color: black;
+    color: white;
+    text-align: center;
+    border: 1px solid rgb(78, 75, 75);
+}
+
+#Upgrade1:hover {
+    cursor: default;
+}
+
+#Upgrade2 {
+    width: auto;
+    padding: 5px;
+    margin: 5px;
+    background-color: rgb(158, 0, 0);
+    color: rgb(0, 191, 255);
+    text-align: center;
+    border: 3px solid black;
+    visibility: collapse;
+}
+
+.Milestones {
+    position: absolute;
+    width: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: rgb(220, 214, 206);
+    margin-top: 15px;
+    visibility: collapse;
+}
+
+#Milestone-Note {
+    font-size: 15px;
+    text-align: center;
+    margin-top: 3px;
+}
+
+#Milestone1 {
+    text-align: center;
+    background-color: rgb(157, 152, 152);
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 5px;
+    margin: 5px;
+}
+
+#Milestone1:hover {
+    cursor: pointer;
+    background-color: rgb(99, 97, 97);
+}
+
+#Milestone2 {
+    text-align: center;
+    background-color: rgb(157, 152, 152);
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 5px;
+    margin: 5px;
+}
+
+#Milestone2:hover {
+    cursor: pointer;
+    background-color: rgb(99, 97, 97);
+}
+
+.Corrupted-prestige {
+    width: 45%;
+    height: 58%;
+    background-color: rgb(6, 132, 216);
+    display: flex;
+    justify-content: center;
+    margin-inline: auto;
+    flex-wrap: wrap;
+    margin-top: 15px;
+    visibility: collapse;
+}
+
+#Corrupted-prestige-points {
+    font-size: 22px;
+    color: rgb(92, 2, 92);
+    margin-top: 3px;
+}
+
+.Corruption-upgrades {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    width: 45%;
+    position: absolute;
+    margin-top: 40px;
+    font-size: 14px;
+    text-align: center;
+}
+
+#Corruption-up1,
+#Corruption-up2,
+#Corruption-up3 {
+    width: 31%;
+    padding: 3px;
+    background-color: rgb(157, 3, 157);
+}
+
+#Corruption-up1:hover,
+#Corruption-up2:hover,
+#Corruption-up3:hover {
+    cursor: pointer;
+    background-color: rgb(144, 0, 255);
+}
+
+.tabs {
+    position: absolute;
+    margin-top: 9%;
+    margin-inline: auto;
+}
+
+#Glyph-tournament-tab {
+    display: flex;
+    width: 150px;
+    height: 30px;
+    justify-content: center;
+    align-items: center;
+    background-color: lime;
+    border: 2px solid green;
+}
+
+#Glyph-tournament-tab:hover {
+    cursor: pointer;
+    background-color: rgb(2, 207, 2);
+}
+
+#Co-Note {
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 1%;
+}
+
+#Secret-lore {
+    position: absolute;
+    text-decoration: none;
+}
+
+a {
+    color: hsl(0, 4%, 16%);
+}
+
+#Lore {
+    text-align: center;
+    font-size: 18px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+}
+
+#Super-Secret-lore {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}

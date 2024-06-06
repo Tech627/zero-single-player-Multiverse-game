@@ -1,0 +1,105 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Zero - single player Multiverse game</title>
+</head>
+<body onload="Get()">
+    <div class="Points">
+        <div id="Points"> 0 Points </div>
+        <div id="Universe-limit"> Limit: 10 </div>
+        <div id="Points-persec"> (+1 Points/sec) </div>
+    </div>
+    <div class="Corruption-reset">
+        <div id="Corruption-desc"> Corrupt this Universe and become stronger to take down the Glyphs </div>
+        <div id="Corruption-req"> req: 10,000,000 Points </div>
+    </div>
+    <div class="Universe">
+        <div class="Planets">
+            <div id="Planet1" onclick="Planet1Lore()">
+                <div id="Planet1-amt"> You have 0 Planet 1 </div>
+                <div id="Planet1-benefit"> Planet 1 gets you +1 Points/sec </div>
+                <div id="Planet1-req"> req: 10 Points </div>
+            </div>
+            <div id="Planet2" onclick="Planet2Lore()">
+                <div id="Planet2-amt"> You have 0 Planet 2 </div>
+                <div id="Planet2-benefit"> Planet 2 gets you +3 Points/sec </div>
+                <div id="Planet2-req"> req: 10 Planet 1 </div>
+            </div>
+            <div id="Planet3" onclick="Planet3Lore()">
+                <div id="Planet3-amt"> You have 0 Planet 3 </div>
+                <div id="Planet3-benefit"> Planet 3 gets you +50 Points/sec </div>
+                <div id="Planet3-req"> req: 10 Planet 2 </div>
+            </div>
+            <div id="Planet4" onclick="Planet4Lore()">
+                <div id="Planet4-amt"> Yo- /*ve 0 P-.a-*t 4 </div>
+                <div id="Planet4-benefit"> -.a*et 4 ge-. ,ou +*? /oi.-s/?+c </div>
+                <div id="Planet4-req"> req: 10 Corruption planet 2 </div>
+            </div>
+        </div>
+    </div>
+    <div class="Upgrades">
+        <div id="Upgrade1" onclick="Upgrade1Lore()">
+            <div id="Upgrade1-name"> Universal limit </div>
+            <div id="Upgrade1-desc"> Increase the limit by 1.5 every time you get this </div>
+            <div id="Upgrade1-req"> req: 10 Points </div>
+        </div>
+        <div id="Upgrade2" onclick="Upgrade2Lore()">
+            <div id="Upgrade2-name"> Antimatters potential </div>
+            <div id="Upgrade2-desc"> With the power of antimatter increase your points gain by 5x </div>
+            <div id="Upgrade2-req"> req: 50,000 Points </div>
+        </div>
+    </div>
+    <div id="Secret-lore"><a href="Secret.html">Lore</a></div>
+    <div class="Milestones">
+        <div id="Milestone-Note"> Note: Click on the milestone to activate it </div>
+        <div id="Milestone1" onclick="FirstMilestone()">
+            <div id="Milestone1-name"> [I just can't go without timewalls do I] </div>
+            <div id="Milestone1-desc"> Increase your point gain by 3x </div>
+            <div id="Milestone1-req"> req: 1,000 Points </div>
+            <div id="Milestone1-activated"> activated: [false] </div>
+        </div>
+        <div id="Milestone2" onclick="SecondMilestone()">
+            <div id="Milestone2-name"> [Universe expander] </div>
+            <div id="Milestone2-desc"> Your 1st Upgrade is stronger </div>
+            <div id="Milestone2-req"> req: 10,000 Points </div>
+            <div id="Milestone2-activated"> activated: [false] </div>
+        </div>
+    </div>
+    <div class="Corrupted-prestige">
+        <div id="Corrupted-prestige-points"> You have 0 Corrupted Prestige points </div>
+        <div class="Corruption-upgrades">
+            <div id="Corruption-up1">
+                <div id="Corruption-up1-name"> [Corruption begins] </div>
+                <div id="Corruption-up1-desc"> Unlock the 4th planet but in return you lose the 3rd planet </div>
+                <div id="Corruption-up1-req"> req: 1 Corruption Prestige point </div>
+            </div>
+            <div id="Corruption-up2">
+                <div id="Corruption-up2-name"> [Chalanging Glyphs] </div>
+                <div id="Corruption-up2-desc"> Unlock the Glyph Tournament </div>
+                <div id="Corruption-up2-req"> req: 100 Corruption Prestige points </div>
+            </div>
+            <div id="Corruption-up3">
+                <div id="Corruption-up3-name"> [Matters in my own hands] </div>
+                <div id="Corruption-up3-desc"> Unlock the Matter tab </div>
+                <div id="Corruption-up3-req"> req: 1T Corruption Prestige points </div>
+            </div>
+        </div>
+        <div class="tabs">
+            <div class="tab-btn" id="Glyph-tournament-tab"> Glyph Tournaments </div>
+        </div>
+        <div id="Co-Note"> Note: You reached the current Endgame </div>
+    </div>
+</body>
+<script src="JS/break_eternity.js"></script>
+<script src="JS/numberformating.js"></script>
+<script src="JS/save.js"></script>
+<script src="JS/main.js"></script>
+<script src="JS/planets.js"></script>
+<script src="JS/upgrades.js"></script>
+<script src="JS/milestones.js"></script>
+<script src="JS/gameloop.js"></script>
+<script src="JS/secretlore.js"></script>
+<script src="JS/corruption.js"></script>
+</html>
