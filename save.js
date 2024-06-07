@@ -6,6 +6,7 @@ function Save() {
     if (localStorage) {
         saveitems("firstload", false)
         saveitems("Points", player.points);
+        saveitems("Points-persec", player.points_persec)
         saveitems("Universe-limit", player.Universe_limit)
         saveitems("Planet1-amt", Planet_ups.Planet1.amt)
         saveitems("Planet1-effect", Planet_ups.Planet1.effect)
@@ -50,9 +51,9 @@ function GetItems(saved, newdecimal) { //removes json.parse and localstorage
 function Get() {
     if (localStorage) {
     let firstload = GetItems("firstload", false)
-    let lkasf = GetItems("lkash", false)
     if (!firstload) {
     player.points = GetItems("Points", true);
+    player.points_persec = GetItems("Points-persec", true)
     player.Universe_limit = GetItems("Universe-limit", true)
     Planet_ups.Planet1.amt = GetItems("Planet1-amt", true)
     Planet_ups.Planet1.effect = GetItems("Planet1-effect", true)
