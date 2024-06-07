@@ -1,3 +1,4 @@
+var ShowedSavedGame = false;
 function saveitems(name, location) { // this basically just removes the localstorage.setitem and json.stringify
     localStorage.setItem(name, JSON.stringify((location)));
 }
@@ -6,6 +7,7 @@ function Save() {
     if (localStorage) {
         saveitems("firstload", false)
         saveitems("Points", player.points);
+        saveitems("Points-persec", player.points_persec)
         saveitems("Universe-limit", player.Universe_limit)
         saveitems("Planet1-amt", Planet_ups.Planet1.amt)
         saveitems("Planet1-effect", Planet_ups.Planet1.effect)
@@ -52,6 +54,7 @@ function Get() {
     let firstload = GetItems("firstload", false)
     if (!firstload) {
     player.points = GetItems("Points", true);
+    player.points_persec = GetItems("Points-persec", true)
     player.Universe_limit = GetItems("Universe-limit", true)
     Planet_ups.Planet1.amt = GetItems("Planet1-amt", true)
     Planet_ups.Planet1.effect = GetItems("Planet1-effect", true)
@@ -82,9 +85,17 @@ function Get() {
 }
 
 function HardReset() {
-    localStorage.clear(); // wipe localstorage
-    saveitems("firstload", true)
-    location.reload(true)
+    if (confirm(["Are you sure you want to do that? You can become much stronger if you just continue.."]) == true) {
+        localStorage.clear(); // wipe localstorage
+        saveitems("firstload", true)
+        location.reload(true)
+    }
 }
 
-setInterval(Save, 10000)
+setInterval( () => {
+    Save();
+    document.getElementById("Saved-game").style.visibility = "visible"
+    setTimeout( () => {
+        document.getElementById("Saved-game").style.visibility = "hidden"
+    }, 3000)
+}, 10000)

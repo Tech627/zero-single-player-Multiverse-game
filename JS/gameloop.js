@@ -51,8 +51,8 @@ function GameLoop() {
         if(Milestones.Milestone1.clicked.eq(1)) {
             player.points_persec = player.points_persec.mul(3)
             Milestones.Milestone1.clicked = new Decimal(0)
-            document.getElementById("Milestone2-activated").textContent = "activated: [true]"
-            document.getElementById("Milestone2").style.background = "limegreen"
+            document.getElementById("Milestone1-activated").textContent = "activated: [true]"
+            document.getElementById("Milestone1").style.background = "limegreen"
         }
     }
     else {
@@ -103,6 +103,7 @@ function GameLoop() {
         Milestones.unlocked = true
     }
     if(Milestones.unlocked === true) {
+        document.getElementById("Milestones").style.visibility = "visible"
         document.getElementById("Milestone1").style.visibility = "visible"
         document.getElementById("Milestone2").style.visibility = "visible"
     }

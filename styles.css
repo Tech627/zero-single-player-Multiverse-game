@@ -314,3 +314,18 @@ a {
     cursor: pointer;
     background-color: rgb(44, 43, 43);
 }
+
+#Saved-Game {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 100px;
+    height: auto;
+    padding: 4px;
+    margin: 5px;
+    background-color: rgb(10, 151, 179);
+    border: 2px solid rgb(6, 48, 220);
+    text-align: center;
+    visibility: hidden;
+}
