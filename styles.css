@@ -297,3 +297,20 @@ a {
     bottom: 0;
     right: 0;
 }
+
+#Hard-reset {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    margin: 5px;
+    width: 150px;
+    height: auto;
+    padding: 5px;
+    text-align: center;
+    background-color: rgb(75, 74, 74);
+}
+
+#Hard-reset:hover {
+    cursor: pointer;
+    background-color: rgb(44, 43, 43);
+}
